@@ -13,6 +13,7 @@ Table Structure Jobs sendmail
 - PHP Laravel 8.x Framework
 - Database: mysql 8.x maybe mariadb 10.7
 - Email Server is a standalone module built into the Laravel Framework
+- Deploy to EC2 with: nginx, php-fpm, mariad
 
 > ![alt text](images_readme/1.png "Package module sendmail")
 - This module supports sending on web interface and API
@@ -63,6 +64,9 @@ MAIL_PASSWORD_2=<input password of mailgun>
 MAIL_ENCRYPTION_2=tls
 MAIL_FROM_ADDRESS_2=<input mail of domain sendmail>
 MAIL_FROM_NAME_2="Arent Inc"
+...
+
+$ php artisan key:generate
 
 # run migrate database
 $ php artisan migrate

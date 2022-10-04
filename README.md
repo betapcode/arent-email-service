@@ -85,6 +85,15 @@ Run start server for developer
 $ php artisan serve
 ```
 
+Keep Laravel Queue System Running on Server: Supervisor
+```
+cp laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf
+sudo supervisorctl reread
+sudo supervisorctl update
+sudo supervisorctl start laravel-worker:*
+
+```
+
 ## Demos
 > ![alt text](images_readme/2.png "2")
 > ![alt text](images_readme/3.png "3")

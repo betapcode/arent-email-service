@@ -1,0 +1,41 @@
+{
+    "name": "arent/sendmail",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pham Ngoc Minh",
+            "email": "pnminh.it@gmail.com",
+            "homepage": "https://arent3d.com"
+        }
+    ],
+    "homepage": "https://github.com/arent/sendmail",
+    "keywords": ["Laravel", "SendMail"],
+    "require": {
+        "illuminate/support": "~8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~8.0",
+        "orchestra/testbench": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Arent\\SendMail\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Arent\\SendMail\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Arent\\SendMail\\SendMailServiceProvider"
+            ],
+            "aliases": {
+                "SendMail": "Arent\\SendMail\\Facades\\SendMail"
+            }
+        }
+    }
+}
